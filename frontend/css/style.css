@@ -51,3 +51,36 @@ body {
     font-size: 22px;
 }
 
+.auth-page {
+    background: #f8f9fa;
+}
+
+.auth-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.auth-logo {
+    font-size: 50px;
+}
+
+.auth-card .form-control {
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.auth-card .btn {
+    border-radius: 10px;
+}
+
+.auth-card a {
+    color: #212529;
+}
+
+.auth-card a:hover {
+    text-decoration: underline !important;
+}
+
