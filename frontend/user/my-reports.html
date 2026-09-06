@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>My Reports | Lost & Found</title>
+
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body class="dashboard-page">
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+
+        <a
+            class="navbar-brand fw-bold"
+            href="user_dashboard.html"
+        >
+            Lost & Found
+        </a>
+
+        <div>
+
+            <a
+                href="browse-items.html"
+                class="btn btn-outline-light me-2"
+            >
+                Browse Items
+            </a>
+
+            <a
+                href="user_dashboard.html"
+                class="btn btn-outline-light me-2"
+            >
+                Dashboard
+            </a>
+
+            <a
+                href="../auth/login.html"
+                class="btn btn-danger"
+            >
+                Logout
+            </a>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- Main Content -->
+<div class="container py-5">
+
+    <!-- Heading -->
+    <div class="text-center mb-4">
+
+        <h2 class="fw-bold">
+            My Reports
+        </h2>
+
+        <p class="text-muted">
+            View and manage the items you have reported.
+        </p>
+
+    </div>
+
+
+    <!-- Filter -->
+    <div class="dashboard-card mb-4">
+
+        <div class="row align-items-end">
+
+            <div class="col-md-4">
+
+                <label
+                    for="reportFilter"
+                    class="form-label"
+                >
+                    Filter Reports
+                </label>
+
+                <select
+                    id="reportFilter"
+                    class="form-select"
+                >
+
+                    <option value="all">
+                        All Reports
+                    </option>
+
+                    <option value="lost">
+                        Lost Items
+                    </option>
+
+                    <option value="found">
+                        Found Items
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Reports Table -->
+    <div class="dashboard-card">
+
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Item
+                        </th>
+
+                        <th>
+                            Type
+                        </th>
+
+                        <th>
+                            Category
+                        </th>
+
+                        <th>
+                            Location
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="reportsTableBody">
+
+                    <!-- Report 1 -->
+                    <tr data-type="lost">
+
+                        <td>
+                            Black Samsung Phone
+                        </td>
+
+                        <td>
+                            <span class="badge bg-danger">
+                                Lost
+                            </span>
+                        </td>
+
+                        <td>
+                            Electronics
+                        </td>
+
+                        <td>
+                            College Campus
+                        </td>
+
+                        <td>
+                            02 Sep 2026
+                        </td>
+
+                        <td>
+                            <span class="badge bg-warning text-dark">
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="item-details.html"
+                                class="btn btn-sm btn-outline-primary"
+                            >
+                                View
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- Report 2 -->
+                    <tr data-type="found">
+
+                        <td>
+                            Brown Leather Wallet
+                        </td>
+
+                        <td>
+                            <span class="badge bg-success">
+                                Found
+                            </span>
+                        </td>
+
+                        <td>
+                            Wallet
+                        </td>
+
+                        <td>
+                            College Library
+                        </td>
+
+                        <td>
+                            03 Sep 2026
+                        </td>
+
+                        <td>
+                            <span class="badge bg-success">
+                                Approved
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="item-details.html"
+                                class="btn btn-sm btn-outline-primary"
+                            >
+                                View
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- Report 3 -->
+                    <tr data-type="lost">
+
+                        <td>
+                            College ID Card
+                        </td>
+
+                        <td>
+                            <span class="badge bg-danger">
+                                Lost
+                            </span>
+                        </td>
+
+                        <td>
+                            Documents
+                        </td>
+
+                        <td>
+                            Main Gate
+                        </td>
+
+                        <td>
+                            04 Sep 2026
+                        </td>
+
+                        <td>
+                            <span class="badge bg-danger">
+                                Rejected
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="item-details.html"
+                                class="btn btn-sm btn-outline-primary"
+                            >
+                                View
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- No Reports -->
+    <div
+        id="noReports"
+        class="text-center mt-4 d-none"
+    >
+
+        <h5>
+            No reports found
+        </h5>
+
+        <p class="text-muted">
+            You haven't reported any items yet.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+
+    <p class="mb-0">
+        © 2026 Lost & Found Management System
+    </p>
+
+</footer>
+
+
+<script src="../js/user.js"></script>
+
+
+</body>
+
+</html>
