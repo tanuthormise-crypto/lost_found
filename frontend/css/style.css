@@ -1,0 +1,53 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: #212529;
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+.hero {
+    background: #f8f9fa;
+}
+
+.hero h1 {
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero-card {
+    background: white;
+    border-radius: 20px;
+    padding: 60px 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+    font-size: 80px;
+}
+
+.hero-card h3 {
+    font-size: 28px;
+}
+
+.feature-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    height: 100%;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
