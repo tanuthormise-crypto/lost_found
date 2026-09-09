@@ -1,214 +1,119 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Admin Dashboard | Lost & Found</title>
-
-    <!-- Bootstrap -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
-
 <body class="dashboard-page">
-
-
-<!-- ================= NAVBAR ================= -->
-
 <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-
     <div class="container-fluid px-4">
-
         <a class="navbar-brand fw-bold" href="../index.html">
             🔎 Lost & Found
         </a>
-
-
         <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarContent">
-
             <span class="navbar-toggler-icon"></span>
-
         </button>
-
-
         <div class="collapse navbar-collapse" id="navbarContent">
-
             <ul class="navbar-nav ms-auto align-items-lg-center">
-
                 <li class="nav-item">
                     <a class="nav-link" href="admin_dashboard.html">
                         Dashboard
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="users.html">
                         Users
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="reports.html">
                         Reports
                     </a>
                 </li>
-
                 <li class="nav-item ms-lg-3">
-
                     <button
                         class="btn btn-outline-dark"
                         id="logoutBtn">
-
                         Logout
-
                     </button>
-
                 </li>
-
             </ul>
-
         </div>
-
     </div>
-
 </nav>
-
-
-<!-- ================= MAIN ================= -->
-
 <main class="container-fluid px-4 py-5">
-
-
-    <!-- Header -->
-
     <div class="mb-5">
-
         <p class="text-muted mb-1">
             Administration Panel
         </p>
-
         <h1 class="fw-bold">
             Admin Dashboard
         </h1>
-
         <p class="text-muted">
             Manage users, reports, items and claims.
         </p>
-
     </div>
-
-
-    <!-- ================= STATISTICS ================= -->
-
     <div class="row g-4 mb-5">
-
-
-        <!-- Users -->
-
         <div class="col-md-6 col-lg-3">
-
             <div class="dashboard-card">
-
                 <div class="dashboard-icon">
                     👥
                 </div>
-
                 <div>
-
                     <p class="text-muted mb-1">
                         Total Users
                     </p>
-
                     <h2 class="fw-bold mb-0">
                         120
                     </h2>
-
                 </div>
-
             </div>
-
         </div>
-
-
-        <!-- Lost -->
-
         <div class="col-md-6 col-lg-3">
-
             <div class="dashboard-card">
-
                 <div class="dashboard-icon">
                     🔴
                 </div>
-
                 <div>
-
                     <p class="text-muted mb-1">
                         Lost Reports
                     </p>
-
                     <h2 class="fw-bold mb-0">
                         35
                     </h2>
-
                 </div>
-
             </div>
-
         </div>
-
-
-        <!-- Found -->
-
         <div class="col-md-6 col-lg-3">
-
             <div class="dashboard-card">
-
                 <div class="dashboard-icon">
                     🟢
                 </div>
-
                 <div>
-
                     <p class="text-muted mb-1">
                         Found Reports
                     </p>
-
                     <h2 class="fw-bold mb-0">
                         28
                     </h2>
-
                 </div>
-
             </div>
-
         </div>
-
-
-        <!-- Pending -->
-
         <div class="col-md-6 col-lg-3">
-
             <div class="dashboard-card">
-
                 <div class="dashboard-icon">
                     ⏳
                 </div>
-
                 <div>
-
                     <p class="text-muted mb-1">
                         Pending Reports
                     </p>
@@ -216,318 +121,191 @@
                     <h2 class="fw-bold mb-0">
                         8
                     </h2>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
-
-    <!-- ================= QUICK ACTIONS ================= -->
-
     <div class="mb-4">
-
         <h3 class="fw-bold">
             Management
         </h3>
-
         <p class="text-muted">
             Manage the Lost & Found platform.
         </p>
-
     </div>
-
-
     <div class="row g-4 mb-5">
-
-
-        <!-- Manage Users -->
-
         <div class="col-md-6 col-lg-3">
-
             <div class="action-card">
-
                 <div class="action-icon">
                     👥
                 </div>
-
                 <h4>
                     Manage Users
                 </h4>
-
                 <p class="text-muted">
                     View and manage registered users.
                 </p>
-
                 <a
                     href="users.html"
                     class="btn btn-dark">
-
                     View Users
-
                 </a>
-
             </div>
-
         </div>
-
-
-        <!-- Reports -->
-
         <div class="col-md-6 col-lg-3">
-
             <div class="action-card">
-
                 <div class="action-icon">
                     📋
                 </div>
-
                 <h4>
                     Manage Reports
                 </h4>
-
                 <p class="text-muted">
                     Approve or reject lost and found reports.
                 </p>
-
                 <a
                     href="reports.html"
                     class="btn btn-dark">
-
                     View Reports
-
                 </a>
-
             </div>
-
         </div>
-
-
-        <!-- Lost Items -->
-
         <div class="col-md-6 col-lg-3">
-
             <div class="action-card">
-
                 <div class="action-icon">
                     🔴
                 </div>
-
                 <h4>
                     Lost Items
                 </h4>
-
                 <p class="text-muted">
                     View all reported lost items.
                 </p>
-
                 <a
                     href="items.html?type=lost"
                     class="btn btn-outline-dark">
-
                     View Lost
-
                 </a>
-
             </div>
-
         </div>
-
-
-        <!-- Found Items -->
-
         <div class="col-md-6 col-lg-3">
-
             <div class="action-card">
-
                 <div class="action-icon">
                     🟢
                 </div>
-
                 <h4>
                     Found Items
                 </h4>
-
                 <p class="text-muted">
                     View all reported found items.
                 </p>
-
                 <a
                     href="items.html?type=found"
                     class="btn btn-outline-dark">
-
                     View Found
-
                 </a>
-
             </div>
-
         </div>
-
     </div>
-
     <div class="d-flex justify-content-between align-items-center mb-3">
-
         <div>
-
             <h3 class="fw-bold mb-1">
                 Pending Reports
             </h3>
-
             <p class="text-muted mb-0">
                 Reports waiting for admin approval.
             </p>
-
         </div>
-
         <a
             href="reports.html"
             class="btn btn-outline-dark">
-
             View All
-
         </a>
-
     </div>
-
-
     <div class="table-responsive">
-
         <table class="table bg-white shadow-sm align-middle">
-
             <thead>
-
                 <tr>
-
                     <th>Item</th>
                     <th>Reported By</th>
                     <th>Type</th>
                     <th>Date</th>
                     <th>Status</th>
                     <th>Action</th>
-
                 </tr>
-
             </thead>
-
-
             <tbody>
-
                 <tr>
-
                     <td>
                         Black Wallet
                     </td>
-
                     <td>
                         Tanu
                     </td>
-
                     <td>
-
                         <span class="badge bg-danger">
                             Lost
                         </span>
-
                     </td>
-
                     <td>
                         04 Sep 2026
                     </td>
-
                     <td>
-
                         <span class="badge bg-warning text-dark">
                             Pending
                         </span>
-
                     </td>
-
                     <td>
-
                         <button class="btn btn-sm btn-success">
                             Approve
                         </button>
-
                         <button class="btn btn-sm btn-danger">
                             Reject
                         </button>
-
                     </td>
-
                 </tr>
-
-
                 <tr>
-
                     <td>
                         Blue Backpack
                     </td>
-
                     <td>
                         Rahul
                     </td>
-
                     <td>
-
                         <span class="badge bg-success">
                             Found
                         </span>
-
                     </td>
-
                     <td>
                         03 Sep 2026
                     </td>
-
                     <td>
-
                         <span class="badge bg-warning text-dark">
                             Pending
                         </span>
-
                     </td>
-
                     <td>
-
                         <button class="btn btn-sm btn-success">
                             Approve
                         </button>
-
                         <button class="btn btn-sm btn-danger">
                             Reject
                         </button>
-
                     </td>
-
                 </tr>
-
             </tbody>
-
         </table>
-
     </div>
-
 </main>
 <footer class="bg-dark text-white text-center py-3">
-
     <p class="mb-0">
         © 2026 Lost & Found — Admin Panel
     </p>
-
 </footer>
-
-
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
-
 <script src="../js/admin.js"></script>
-
 </body>
-
 </html>
-
