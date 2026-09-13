@@ -30,8 +30,17 @@ const createItem = async (req, res) => {
 const getallitems = async (req, res) => {
     try {
         const { type, search } = req.query;
+        let query = `
+    SELECT
+        items.*,
+        users.name AS user_name,
+        users.email AS user_email
+    FROM items
+    JOIN users ON items.user_id = users.id
+    WHERE 1=1
+`;
 
-        let query = "SELECT * FROM items WHERE 1=1";
+        
         const values = [];
         if (type) {
             values.push(type);
@@ -62,12 +71,17 @@ const getItemById = async (req, res) => {
     try {
 
         const { id } = req.params;
-
-        const result = await pool.query(
-            "SELECT * FROM items WHERE id = $1",
-            [id]
-        );
-
+const result = await pool.query(
+    `SELECT
+        items.*,
+        users.name AS user_name,
+        users.email AS user_email
+     FROM items
+     JOIN users ON items.user_id = users.id
+     WHERE items.id = $1`,
+    [id]
+);
+       
         if (result.rows.length === 0) {
             return res.status(404).json({
                 message: "Item not found"
